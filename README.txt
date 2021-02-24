@@ -1,6 +1,6 @@
 DESCRIPTION
 This package contains the final report, poster in DOC folder, and a web application under CODE/Map-Visualization. The application achieves visualization for the accident information across the U.S. and prediction for the accident handling time based on time, location, weather and road conditions. 
-The rpart regression tree model script is also included under CODE/Model with the final modeling dataset in this package. (The script will generate two outcome files: 1. the best tree model rules and 2. prediction vs actual values). Other data processing, modeling and testing scripts have been uploaded to GitHub: https://github.gatech.edu/Team-97/Scripts. Please follow the instructions inside each script to run and test data manipulation and data modeling if interested in.
+The rpart regression tree model script is also included under CODE/Model with the final modeling dataset in this package. (The script will generate two outcome files: 1. the best tree model rules and 2. prediction vs actual values). Please follow the instructions inside each script to run and test data manipulation and data modeling if interested in.
 To test the web application, please follow the instruction below to set up the environment and install Flask. Any combination of user inputs is acceptable for the web tool, but to get different prediction results, here are some examples provided:
 Date: 3/1/2020, Temperature: 30, Junction: Yes, Zip code: 29009
 Date: 5/1/2020, Temperature: 50, Junction: No, Zip code: 21014
