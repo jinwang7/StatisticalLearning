@@ -1,8 +1,10 @@
 # US-Car-Accident-Handling-Time-Prediction
 
-US car accident handling time prediction 
 Car accident is the leading cause of unintentional death in the United State. While most current studies focusing on how to predict car accident probabilities, we took an innovative approach to develop a predictive model tool for car accident handling time with a web interactive user interface. Our tool can help the local law enforcement to efficiently allocate patrolling staffs given limited resources. It can potentially save lives and taxpayer’s money. It can also help individual users to be more vigilant in high accident rate area.          
+
 We integrate the US car accident dataset with census bureau and bureau of labor statistics dataset, and web scraping dataset. The master data has 351 thousand rows and 190 columns. The dependent variable is car accident handling time which is derived from the time of car accidents. After removed outliers and used the 2019 data, the distribution of car accident handling time is approximately normal. Through correlation analysis and feature re-generation, we identified a list of strong explanatory variables like time, weather and local environments, which are also addressed in current studies.       
+
 Regression tree model is selected as the final model because of four reasons: First, it can handle missing data well; Second, it can capture nonlinear and interaction effects, Third, it’s interpretable Last, it’s easy to implement. Through a 10-fold cross validation, the best tree model reports 32 Root mean square error on 25% of testing dataset. It has better prediction accuracy while keeping major explanatory variables. D3 bubble map as frontend method is implemented with an interactive user interface. It takes parameters from end user and send it back to sqlite database for predictions in a python flask framework. 
+
 The regression tree model outperforms LASSO regression models with a lower RMSE on testing sample from 35 to 32. Classification model is less accurate by using categorical dependent variable. The visualization result is shown in bottom right. When users type in parameters on the top bar, a pop-up window appears with the prediction of car accident handling time. 
 
