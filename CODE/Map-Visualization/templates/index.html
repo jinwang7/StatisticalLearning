@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      U.S. Car Accident Locations by County (2016-2020) and Handling Time
+      Prediction
+    </title>
+    <script src="../static/scripts/d3.v5.min.js"></script>
+    <script src="../static/scripts/topojson.v2.min.js"></script>
+    <script src="../static/scripts/d3-tip.min.js"></script>
+
+    <link rel="shortcut icon" href="#" />
+    <style>
+      h2 {
+        text-align: center;
+      }
+      .input {
+        margin: auto;
+        width: 80%;
+        font-size: 14px;
+      }
+      .state {
+        fill: #e3e3e3;
+        stroke: #333;
+        stroke-width: 1;
+      }
+      .state .active {
+        fill: orange;
+      }
+      .county {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 0.5;
+      }
+      #map {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .bubble {
+        fill-opacity: 0.5;
+        stroke: #c40c0e;
+        fill: #c40c0e;
+        stroke-width: 0.5px;
+      }
+      .legend circle {
+        fill: none;
+        stroke: #ccc;
+      }
+
+      .legend text {
+        fill: #777;
+        font: 10px sans-serif;
+        text-anchor: middle;
+      }
+      .d3-tip {
+        font-family: sans-serif;
+        color: white;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        background: gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>
+      U.S. Car Accident Locations by County (2016-2020) and Handling Time
+      Prediction
+    </h2>
+    <div class="input">
+      <form id="myForm">
+        <!-- <label for="state">State: </label>
+        <select name="state" id="stateList"></select> -->
+        <label for="birthday">Date:</label>
+        <input type="date" id="date" name="date" />
+        <label for="temperature">Temperature(°F): </label>
+        <input type="text" id="temperature" name="temperature" />
+        <label for="junction">Junction: </label>
+        <select name="junction" id="junctionList"></select>
+        <label for="zipcode">Zip code: </label>
+        <input type="text" id="zipcode" name="zipcode" />
+        <input
+          type="button"
+          onclick="handleSubmit()"
+          value="Predict Car Accident Handling Time"
+        />
+      </form>
+    </div>
+    <div id="map"></div>
+    <script src="../static/visualization.js"></script>
+  </body>
+</html>
